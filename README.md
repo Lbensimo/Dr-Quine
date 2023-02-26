@@ -1,17 +1,21 @@
 
 # Dr-Quine
 
-This project contains 4 programs including 1 malware putting into  
- practice the concept of Quine programs
+This project contains 4 programs including 1 malware putting into  practice the concept of Quine programs  
+The 4 programs are available in C language and in nasm
+
+To run the programs in assembler, please execute the following command
+
+```shell
+nasm -f elf64 [program.s]
+```
+and
+```shell
+gcc -Wl,-z,noexecstack -no-pie [program.o]
+```
 ## Colleen Description
 
-The purpose of the Colleen program is to display its exact source code  
- as if we had executed a "cat" on our program.  
-There are however some constraints imposed such as the fact  
- that the program must contain two different comments,  
-a main function which would call another function.
-It was forbidden to display  
- the source code through the location of the file in  the hard disk and   
+The purpose of the Colleen program is to display its exact source code as if we had executed a "cat" on our program. There are however some constraints imposed such as the fact that the program must contain two different comments, a main function which would call another function.bIt was forbidden to display the source code through the location of the file in  the hard disk and
  the program had to take no argument
 
 
@@ -94,6 +98,7 @@ therefore it is no longer possible to stop it via ' ^C'.
 Several processes will therefore be created almost simultaneously,  
  which will make the execution quite difficult to stop.
 
+Note: in assembler, I didn't use malloc
 ## Code explanation Grognasse
 
 ### **Warning !!**  
